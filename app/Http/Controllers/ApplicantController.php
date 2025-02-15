@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Applicant;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ApplicantController extends Controller
 {
@@ -15,5 +16,36 @@ class ApplicantController extends Controller
                                 ->get();
         // dd($applicants);
         return view('applicants', compact('applicants'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $applicant = Applicant::findOrFail($id);
+
+        // Validation rules
+        $request->validate([
+            'full_name' => 'required|string|max:255',
+            'email' => [
+                'required',
+                'email',
+                Rule::unique('applicants')->ignore($applicant->id),
+            ],
+            'phone_number' => [
+                'required',
+                'string',
+                Rule::unique('applicants')->ignore($applicant->id),
+            ],
+        ]);
+
+        try {
+            $applicant->full_name = $request->full_name;
+            $applicant->phone_number = $request->phone_number;
+            $applicant->email = $request->email;
+            $applicant->save();
+
+            return redirect()->route('applicants')->with('success', 'Applicant information updated successfully.');
+        } catch (\Exception $e) {
+            return redirect()->route('applicants')->with('error', 'Failed to update applicant information.');
+        }
     }
 }

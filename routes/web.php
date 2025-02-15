@@ -8,4 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('applicants', [ApplicantController::class, 'show'])->name('applicants');
+Route::put('update/applicant/{id}', [ApplicantController::class, 'update'])->name('applicant.update');
 

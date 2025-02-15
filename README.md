@@ -9,6 +9,7 @@ A simple yet powerful Laravel 11 application to manage and view applicants' deta
 - **View Applicants**: Display a list of applicants with their full name, email, and phone number.
 - **Search Functionality**: filter applicants by name, email, or skills.
 - **Education Details**: View each applicant's educational background.
+- **Update Details**: Update Applicant's info.
 - **Work Experience**: See the applicant's professional work history.
 - **Skills**: Display the applicant's skills in a clean and organized way.
 - **Responsive Design**: Built with Bootstrap 5 for a modern and mobile-friendly UI.

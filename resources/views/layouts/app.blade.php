@@ -88,6 +88,17 @@
                 font-size: 1.2rem;
                 margin-top: 2rem;
             }
+            .update-btn {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                transition: background-color 0.2s;
+            }
+            .update-btn:hover {
+                background-color: #218838;
+            }
         </style>
     </head>
 <body>
