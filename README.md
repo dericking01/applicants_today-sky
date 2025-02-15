@@ -42,3 +42,17 @@ A simple yet powerful Laravel 11 application to manage and view applicants' deta
 - php artisan serve
 
 ## Access the app at <http://127.0.0.1:8000>
+
+## Screenshots
+
+### Applicants List
+
+![Applicants List](screenshots/applicant1.JPG)
+
+### Applicant Details
+
+![Applicant Details](screenshots/applicant3.JPG)
+
+### Update Applicant Info
+
+![Update Applicant Info](screenshots/applicant2.JPG)
