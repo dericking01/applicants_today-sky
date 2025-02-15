@@ -147,7 +147,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="mb-0">&copy; 2023 Applicant Tracker. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            <p class="mb-0">&copy; 2025 Applicant Tracker. All rights reserved. | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
 
